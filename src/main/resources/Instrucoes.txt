@@ -1,0 +1,21 @@
+Instruções
+
+1 - Exemplo de um arquivo Json
+
+{
+	"comp": 13,
+	"pos": [1,5,12],
+	"tape": []
+}
+
+Onde:
+ "comp" = comprimento da fita
+ "pos" = posições em que o reagente vai ser pingado
+ "tape" = cria a fita com a quantidade de posições que foram informada
+
+
+2 - Para o teste usei o Postman, deve ser feita uma requisição HTTP Post, passando o corpo do Json
+ URI = localhost:8080/preencher-fita
+
+3 - Após receber o status 200 do post, deve ser chamado o metódo GET que ira retornar o objeto Tape preenchido
+ URI = localhost:8080/verificar-fita

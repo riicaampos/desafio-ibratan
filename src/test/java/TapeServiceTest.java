@@ -29,12 +29,6 @@ public class TapeServiceTest {
             adicionarPreenchidos(i);
         }
 
-        //Primeiro dia depois do primeiro preenchimento
-        //A aqui é o dia 1
-        //initFill(t);
-
-
-        //Percorre os demais espaços
         percorre(t);
 
     }
@@ -71,7 +65,7 @@ public class TapeServiceTest {
                 dias += 1;
             }
 
-            for(Integer in : auxListP){
+            for (Integer in : auxListP) {
                 adicionarPreenchidos(in);
             }
 
@@ -99,28 +93,6 @@ public class TapeServiceTest {
         }
 
         return count;
-
     }
-
-
-    public void initFill(Tape t) {
-
-        for (Integer i : t.getPos()) {
-
-            if (i.equals(0)) {
-                t.setFita("P", i + 1);
-            } else if (i.equals(t.getComp() - 1)) {
-                t.setFita("P", t.getComp() - 2);
-            } else {
-                t.setFita("P", i + 1);
-                t.setFita("P", i - 1);
-            }
-
-        }
-
-        dias = 1;
-
-    }
-
 
 }

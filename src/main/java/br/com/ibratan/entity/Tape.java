@@ -8,6 +8,12 @@ import java.util.List;
 
 @Getter
 @Setter
+/**
+ * @comp = comprimento da fita
+ * @pos = as posições que tera reagente pingado
+ * @tape = a fita, criada passando o @comp como parametro
+ * @dias = a quantiade de dias que a fita demorará para ser tomada
+ */
 public class Tape implements Serializable {
 
     private Integer comp;
@@ -15,6 +21,8 @@ public class Tape implements Serializable {
     private List<Integer> pos;
 
     private String[] tape;
+
+    private Integer dias;
 
 
     public void setFita(String p, Integer pos){
